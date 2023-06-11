@@ -149,6 +149,7 @@ a {
     height: 5px;
     background: var(--lime);
     animation: anim 5s linear infinite;
+    z-index: 1000;
 }
 
 .hamburger {
@@ -447,7 +448,7 @@ footer .copyright-statement {
 
     .navbar .navbar-inner .navigations {
         position: fixed;
-        top: 65px;
+        top: 60px;
         left: 0;
         height: 100%;
         width: calc(100% - 75px);
