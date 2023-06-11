@@ -350,7 +350,7 @@ footer {
     position: relative;
     background-color: var(--black);
     padding-bottom: 20px;
-    z-index: 999;
+    z-index: 1;
 }
 
 footer .container.flex {
@@ -447,7 +447,7 @@ footer .copyright-statement {
 
     .navbar .navbar-inner .navigations {
         position: fixed;
-        top: 60px;
+        top: 65px;
         left: 0;
         height: 100%;
         width: calc(100% - 75px);
@@ -458,7 +458,7 @@ footer .copyright-statement {
         transform-origin: left;
         transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
         transition-duration: .5s;
-        z-index: 1200;
+        z-index: 999;
     }
 
     .navbar .navbar-inner .navigations.open {
