@@ -417,6 +417,7 @@ footer .copyright-statement {
     background: var(--lime);
     cursor: pointer;
     transition: bottom .3s ease-in-out;
+    z-index: 1000;
 }
 
 .trigger  ion-icon {
@@ -453,11 +454,11 @@ footer .copyright-statement {
         flex-direction: column;
         justify-content: center;
         background: var(--main);
-        z-index: 1000;
         transform: scaleX(0);
         transform-origin: left;
         transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
         transition-duration: .5s;
+        z-index: 1000;
     }
 
     .navbar .navbar-inner .navigations.open {
