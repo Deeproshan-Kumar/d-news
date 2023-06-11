@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <title>D-News | News Portal</title>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <div class="logo">
+                <a href="#">D-News</a>
+            </div>
+            <ul class="navigations">
+                <li id="india" onclick="getNewsByCategory('india')">
+                    India
+                </li>
+                <li id="bollywood" onclick="getNewsByCategory('bollywood')">
+                    Bollywood
+                </li>
+                <li id="sports" onclick="getNewsByCategory('sports')">
+                    Sports
+                </li>
+                <li id="technology" onclick="getNewsByCategory('technology')">
+                    Technology
+                </li>
+                <li id="social" onclick="getNewsByCategory('social')">
+                    Social
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </div>
+            <div class="search-box">
+                <div class="categories">
+                    <select name="filter" id="filter">
+                        <option value="all">All</option>
+                        <option value="information technology">IT</option>
+                        <option value="bollywood">Bollywood</option>
+                        <option value="hollywood">Hollywood</option>
+                        <option value="technology">Tollywood</option>
+                        <option value="games">Games</option>
+                    </select>
+                </div>
+                <div class="search">
+                    <input type="search" id="search" placeholder="Search news...">
+                </div>
+                <button class="search-news" id="search-news-btn">
+                    <ion-icon name="search-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+        <div class="progress-bar"></div>
+    </nav>
+
+    <!-- Main -->
+    <main>
+        <div class="container">
+            <section class="news"></section>
+            <div class="loader">
+                <span class="loading"></span>
+             </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container flex">
+            <div class="column column1">
+                <div class="logo">
+                    <a href="#">D-News</a>
+                </div>
+            </div>
+            <div class="column column2">
+                <ul>
+                    <li id="bollywood" onclick="getNewsByCategory('bollywood')"><span>Bollywood</span></li>
+                    <li id="hollywood" onclick="getNewsByCategory('hollywood')"><span>Hollywood</span></li>
+                    <li id="tollywood" onclick="getNewsByCategory('tollywood')"><span>Tollywood</span></li>
+                    <li id="new-release" onclick="getNewsByCategory('new-release')"><span>New Release</span></li>
+                </ul>
+            </div>
+            <div class="column column3">
+                <ul>
+                    <li id="information-technology" onclick="getNewsByCategory('information-technology')"><span>Information Technology</span></li>
+                    <li id="technology" onclick="getNewsByCategory('technology')"><span>Technology</span></li>
+                    <li id="science" onclick="getNewsByCategory('science')"><span>Science</span></li>
+                    <li id="invention" onclick="getNewsByCategory('invention')"><span>Invention</span></li>
+                </ul>
+            </div>
+            <div class="column column4">
+                <ul>
+                    <li id="google" onclick="getNewsByCategory('google')"><span>Google</span></li>
+                    <li id="facebook" onclick="getNewsByCategory('facebook')"><span>Facebook</span></li>
+                    <li id="microsoft" onclick="getNewsByCategory('microsoft')"><span>Microsoft</span></li>
+                    <li id="adobe" onclick="getNewsByCategory('adobe')"><span>Adobe</span></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright-statement">
+            24x7 All rights reserved. Designed by - Deeproshan Kumar 
+        </p>
+    </footer>
+
+    <a href="#" class="trigger"><ion-icon name="caret-up-circle-outline"></ion-icon></a>
+
+    <template id="news-card">
+        <div class="card" data-aos="fade-up">
+            <div class="card-inner">
+                <div class="image">
+                    <img src="" alt="" class="img">
+                    <p class="category"></p>
+                </div>
+                <div class="card-contents">
+                    <a href="" class="permalink" target="_blank">
+                        <h4 class="title"></h4>
+                    </a>
+                    <div class="info">
+                        <p class="date"></p>
+                    </div>
+                    <p class="description"></p>
+                    <a href="" class="btn" target="_blank">Read more</a>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Ionicons CDN -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- My Script -->
+    <script src="script.js" defer></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>
