@@ -36,7 +36,9 @@ a {
 }
 
 .navbar {
+    position: relative;
     border-bottom: 1px solid var(--gray);
+    z-index: 999;
 }
 
 .navbar.sticky {
@@ -44,7 +46,6 @@ a {
     width: 100%;
     background: var(--main);
     border-bottom: 1px solid transparent;
-    z-index: 999;
 }
 
 .navbar .navbar-inner {
