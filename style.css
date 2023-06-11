@@ -348,7 +348,7 @@ span.loading {
 
 footer {
     position: relative;
-    background-color: var(--light-black);
+    background-color: var(--black);
     padding-bottom: 20px;
     z-index: 999;
 }
