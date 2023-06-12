@@ -20,7 +20,7 @@ function bindData(articles, totalResults, status) {
     let news = document.querySelector(".news"),
     newsTemplate = document.querySelector("#news-card");
     news.innerHTML = "";
-    if(totalResults > 0 && status=="ok") {
+    if(totalResults > 0) {
     articles.forEach(article=>{
         let newsCard = newsTemplate && newsTemplate.content.cloneNode(true);
         fillDataInCard(newsCard, article);
